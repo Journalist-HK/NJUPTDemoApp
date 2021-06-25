@@ -9,11 +9,11 @@ using NJUPTDemoApp.Core.Services;
 
 namespace NJUPTDemoApp.ViewModels
 {
-    public class TelerikDataGridViewModel : ObservableObject
+    public class CallLogDataGridViewModel : ObservableObject
     {
-        public ObservableCollection<Student> Source { get; } = new ObservableCollection<Student>();
+        public ObservableCollection<SampleOrder> Source { get; } = new ObservableCollection<SampleOrder>();
 
-        public TelerikDataGridViewModel()
+        public CallLogDataGridViewModel()
         {
         }
 
@@ -22,7 +22,7 @@ namespace NJUPTDemoApp.ViewModels
             Source.Clear();
 
             // Replace this with your actual data
-            var data = await StudentDataService.GetGridDataAsync();
+            var data = await SampleDataService.GetGridDataAsync();
 
             foreach (var item in data)
             {

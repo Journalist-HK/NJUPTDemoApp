@@ -47,8 +47,23 @@
                     <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE7BE;"/>
                 </winui:NavigationViewItem.Icon>
                 <winui:NavigationViewItem.MenuItems>
-                    <winui:NavigationViewItem x:Uid="Shell_TelerikDataGrid" Icon="Document" helpers:NavHelper.NavigateTo="views:TelerikDataGridPage" />
-                    <winui:NavigationViewItem x:Uid="Shell_Chart" Icon="Document" helpers:NavHelper.NavigateTo="views:ChartPage" />
+                    <winui:NavigationViewItem x:Uid="Shell_TelerikDataGrid" Icon="List" helpers:NavHelper.NavigateTo="views:TelerikDataGridPage" />
+                    <winui:NavigationViewItem x:Uid="Shell_Chart" helpers:NavHelper.NavigateTo="views:ChartPage">
+                    <winui:NavigationViewItem.Icon>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEB05;" />
+                        </winui:NavigationViewItem.Icon>
+                    </winui:NavigationViewItem>
+                </winui:NavigationViewItem.MenuItems>
+            </winui:NavigationViewItem>
+            <winui:NavigationViewItem x:Uid="Shell_Call" Icon="Phone">
+                <winui:NavigationViewItem.MenuItems>
+                    <winui:NavigationViewItem x:Uid="Shell_CallLogDataGrid" Icon="List" helpers:NavHelper.NavigateTo="views:CallLogDataGridPage" />
+                    <winui:NavigationViewItem x:Uid="Shell_CallUserDataGrid" Icon="List" helpers:NavHelper.NavigateTo="views:CallUserDataGridPage" />
+                    <winui:NavigationViewItem x:Uid="Shell_CallRateDataGrid" Icon="List" helpers:NavHelper.NavigateTo="views:CallRateDataGridPage" />
+                    <!--<winui:NavigationViewItem.Icon>
+                            <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEB05;" />
+                        </winui:NavigationViewItem.Icon>
+                    </winui:NavigationViewItem>-->
                 </winui:NavigationViewItem.MenuItems>
             </winui:NavigationViewItem>
         </winui:NavigationView.MenuItems>

@@ -7,14 +7,14 @@ using Windows.UI.Xaml.Navigation;
 
 namespace NJUPTDemoApp.Views
 {
-    public sealed partial class TelerikDataGridPage : Page
+    public sealed partial class CallUserDataGridPage : Page
     {
-        public TelerikDataGridViewModel ViewModel { get; } = new TelerikDataGridViewModel();
+        public CallUserDataGridViewModel ViewModel { get; } = new CallUserDataGridViewModel();
 
-        // TODO WTS: Change the grid as appropriate to your app, adjust the column definitions on TelerikDataGridPage.xaml.
+        // TODO WTS: Change the grid as appropriate to your app, adjust the column definitions on CallUserDataGridPage.xaml.
         // For help see http://docs.telerik.com/windows-universal/controls/raddatagrid/gettingstarted
         // You may also want to extend the grid to work with the RadDataForm http://docs.telerik.com/windows-universal/controls/raddataform/dataform-gettingstarted
-        public TelerikDataGridPage()
+        public CallUserDataGridPage()
         {
             InitializeComponent();
         }
@@ -24,16 +24,6 @@ namespace NJUPTDemoApp.Views
             base.OnNavigatedTo(e);
 
             await ViewModel.LoadDataAsync();
-        }
-
-        private void btnOpen_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
-        {
-
-        }
-
-        private void btnSave_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
-        {
-
         }
     }
 }

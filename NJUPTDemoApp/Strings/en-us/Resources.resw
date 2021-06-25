@@ -130,7 +130,7 @@
     <comment>Navigation view item name for Main</comment>
   </data>
   <data name="Shell_TelerikDataGrid.Content" xml:space="preserve">
-    <value>TelerikDataGrid</value>
+    <value>Score Data Grid</value>
     <comment>Navigation view item name for TelerikDataGrid</comment>
   </data>
   <data name="Shell_Encryption.Content" xml:space="preserve">
@@ -142,7 +142,7 @@
     <comment>Automation name (and description) for the chart page content</comment>
   </data>
   <data name="Shell_Chart.Content" xml:space="preserve">
-    <value>Chart</value>
+    <value>Score Pie Chart</value>
     <comment>Navigation view item name for Chart</comment>
   </data>
   <data name="Settings_Theme.Text" xml:space="preserve">
@@ -245,5 +245,21 @@
   <data name="Shell_Sort.Content" xml:space="preserve">
     <value>Sort</value>
     <comment>Navigation view item name for Sort</comment>
+  </data>
+  <data name="Shell_Call.Content" xml:space="preserve">
+    <value>Call Log Statistics</value>
+    <comment>Navigation view item name for Call</comment>
+  </data>
+  <data name="Shell_CallLogDataGrid.Content" xml:space="preserve">
+    <value>Call Log Data Grid</value>
+    <comment>Navigation view item name for CallLogDataGrid</comment>
+  </data>
+  <data name="Shell_CallUserDataGrid.Content" xml:space="preserve">
+    <value>Phone Number DataGrid</value>
+    <comment>Navigation view item name for CallUserDataGrid</comment>
+  </data>
+  <data name="Shell_CallRateDataGrid.Content" xml:space="preserve">
+    <value>Call Rate Data Grid</value>
+    <comment>Navigation view item name for CallRateDataGrid</comment>
   </data>
 </root>

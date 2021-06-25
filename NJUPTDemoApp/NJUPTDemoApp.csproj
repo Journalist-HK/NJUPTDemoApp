@@ -135,7 +135,7 @@
       <Version>2.0.1</Version>
     </PackageReference>
     <PackageReference Include="Telerik.UI.for.UniversalWindowsPlatform">
-      <Version>1.0.2.5</Version>
+      <Version>1.0.2.3</Version>
     </PackageReference>
     <PackageReference Include="Win2D.uwp">
       <Version>1.26.0</Version>
@@ -157,6 +157,9 @@
     <Compile Include="Services\NavigationService.cs" />
     <Compile Include="Services\ThemeSelectorService.cs" />
     <Compile Include="Services\XamlAttachingCoding.cs" />
+    <Compile Include="ViewModels\CallLogDataGridViewModel.cs" />
+    <Compile Include="ViewModels\CallRateDataGridViewModel.cs" />
+    <Compile Include="ViewModels\CallUserDataGridViewModel.cs" />
     <Compile Include="ViewModels\ChartViewModel.cs" />
     <Compile Include="ViewModels\ConverterViewModel.cs" />
     <Compile Include="ViewModels\EncryptionViewModel.cs" />
@@ -167,6 +170,15 @@
     <Compile Include="ViewModels\TelerikDataGridViewModel.cs" />
     <Compile Include="ViewModels\TextEditorViewModel.cs" />
     <Compile Include="ViewModels\TypingTestViewModel.cs" />
+    <Compile Include="Views\CallLogDataGridPage.xaml.cs">
+      <DependentUpon>CallLogDataGridPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CallRateDataGridPage.xaml.cs">
+      <DependentUpon>CallRateDataGridPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CallUserDataGridPage.xaml.cs">
+      <DependentUpon>CallUserDataGridPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ChartPage.xaml.cs">
       <DependentUpon>ChartPage.xaml</DependentUpon>
     </Compile>
@@ -228,6 +240,18 @@
     <Page Include="Styles\TextBlock.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CallLogDataGridPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CallRateDataGridPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CallUserDataGridPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\ChartPage.xaml">
       <Generator>MSBuild:Compile</Generator>
