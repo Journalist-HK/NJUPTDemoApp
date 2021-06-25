@@ -11,7 +11,7 @@
     <Grid x:Name="ContentArea" Margin="{StaticResource MediumLeftRightMargin}">
         <Grid
             Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
-            <tc:RadCartesianChart x:Uid="CartesianChart">
+            <!--<tc:RadCartesianChart x:Uid="CartesianChart">
                 <tc:RadCartesianChart.HorizontalAxis>
                     <tc:CategoricalAxis />
                 </tc:RadCartesianChart.HorizontalAxis>
@@ -26,7 +26,23 @@
                         <tc:PropertyNameDataPointBinding PropertyName="Value" />
                     </tc:BarSeries.ValueBinding>
                 </tc:BarSeries>
-            </tc:RadCartesianChart>
+            </tc:RadCartesianChart>-->
+            <tc:RadPieChart  x:Name="pieChart" Width="450" Height="450" PaletteName="DefaultDark">
+                
+                <tc:PieSeries Name="a" ShowLabels="True" RadiusFactor="0.75">
+                    
+                    <tc:PieSeries.ValueBinding>
+                        <tc:PropertyNameDataPointBinding PropertyName="Value"/>
+                    </tc:PieSeries.ValueBinding>
+                    <!--<tc:PieSeries.LabelDefinitions>
+                        <tc:ChartSeriesLabelDefinition Margin="-20">
+                            <tc:ChartSeriesLabelDefinition.Binding>
+                                <tc:PropertyNameDataPointBinding PropertyName="Mark" />
+                            </tc:ChartSeriesLabelDefinition.Binding>
+                        </tc:ChartSeriesLabelDefinition>
+                    </tc:PieSeries.LabelDefinitions>-->
+                </tc:PieSeries>
+            </tc:RadPieChart>
         </Grid>
     </Grid>
 </Page>

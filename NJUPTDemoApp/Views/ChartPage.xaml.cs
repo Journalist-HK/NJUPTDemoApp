@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Collections.Generic;
 using NJUPTDemoApp.ViewModels;
 
 using Windows.UI.Xaml.Controls;
@@ -16,13 +16,32 @@ namespace NJUPTDemoApp.Views
         public ChartPage()
         {
             InitializeComponent();
+            a.ItemsSource = CreateData();
         }
 
-        protected override async void OnNavigatedTo(NavigationEventArgs e)
-        {
-            base.OnNavigatedTo(e);
+        //protected override async void OnNavigatedTo(NavigationEventArgs e)
+        //{
+        //    base.OnNavigatedTo(e);
 
-            await ViewModel.LoadDataAsync();
+        //    await ViewModel.LoadDataAsync();
+        //}
+        public List<Data> CreateData()
+        {
+            List<Data> data = new List<Data>();
+            data.Add(new Data() { Value = 6.67, Mark = "A" });
+            data.Add(new Data() { Value = 33.33, Mark = "B" });
+            data.Add(new Data() { Value = 40, Mark = "C" });
+            data.Add(new Data() { Value = 13.33, Mark = "D" });
+            data.Add(new Data() { Value = 6.67, Mark = "E" });
+
+            return data;
+        }
+
+        public class Data
+        {
+            public double Value { get; set; }
+
+            public string Mark { get; set; }
         }
     }
 }
