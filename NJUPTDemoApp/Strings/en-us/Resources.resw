@@ -166,7 +166,7 @@
     <comment>About this application title for Settings</comment>
   </data>
   <data name="Settings_AboutDescription.Text" xml:space="preserve">
-    <value>Settings page placeholder text.  Your app description goes here.</value>
+    <value>No app description.</value>
     <comment>About this application description for Settings</comment>
   </data>
   <data name="Settings_PrivacyTermsLink.Content" xml:space="preserve">
@@ -241,5 +241,9 @@
   </data>
   <data name="Typing_TextBoxRandom.Header" xml:space="preserve">
     <value>Random String:</value>
+  </data>
+  <data name="Shell_Sort.Content" xml:space="preserve">
+    <value>Sort</value>
+    <comment>Navigation view item name for Sort</comment>
   </data>
 </root>

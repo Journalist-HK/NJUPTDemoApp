@@ -150,19 +150,20 @@
     <Compile Include="Behaviors\NavigationViewHeaderMode.cs" />
     <Compile Include="Helpers\Encryption.cs" />
     <Compile Include="Helpers\EnumToBooleanConverter.cs" />
-    <Compile Include="Helpers\FileExtensions.cs" />
     <Compile Include="Helpers\NavHelper.cs" />
     <Compile Include="Helpers\SettingsStorageExtensions.cs" />
     <Compile Include="Services\ActivationService.cs" />
     <Compile Include="Activation\DefaultActivationHandler.cs" />
     <Compile Include="Services\NavigationService.cs" />
     <Compile Include="Services\ThemeSelectorService.cs" />
+    <Compile Include="Services\XamlAttachingCoding.cs" />
     <Compile Include="ViewModels\ChartViewModel.cs" />
     <Compile Include="ViewModels\ConverterViewModel.cs" />
     <Compile Include="ViewModels\EncryptionViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\SettingsViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
+    <Compile Include="ViewModels\SortViewModel.cs" />
     <Compile Include="ViewModels\TelerikDataGridViewModel.cs" />
     <Compile Include="ViewModels\TextEditorViewModel.cs" />
     <Compile Include="ViewModels\TypingTestViewModel.cs" />
@@ -183,6 +184,9 @@
     </Compile>
     <Compile Include="Views\ShellPage.xaml.cs">
       <DependentUpon>ShellPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SortPage.xaml.cs">
+      <DependentUpon>SortPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\TelerikDataGridPage.xaml.cs">
       <DependentUpon>TelerikDataGridPage.xaml</DependentUpon>
@@ -246,6 +250,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\ShellPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SortPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

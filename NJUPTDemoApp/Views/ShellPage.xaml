@@ -33,6 +33,7 @@
             Edit String/en-US/Resources.resw: Add a menu item title for each page
             -->
             <winui:NavigationViewItem x:Uid="Shell_Main" Icon="Home" helpers:NavHelper.NavigateTo="views:MainPage" />
+            <winui:NavigationViewItem x:Uid="Shell_Sort" Icon="Sort" helpers:NavHelper.NavigateTo="views:SortPage" />
             <winui:NavigationViewItem x:Uid="Shell_TypingTest" Icon="Keyboard" helpers:NavHelper.NavigateTo="views:TypingTestPage" />
             <winui:NavigationViewItem x:Uid="Shell_TextEditor" Icon="Edit" helpers:NavHelper.NavigateTo="views:TextEditorPage" />
             <winui:NavigationViewItem x:Uid="Shell_Encryption" Icon="Permissions" helpers:NavHelper.NavigateTo="views:EncryptionPage" />
