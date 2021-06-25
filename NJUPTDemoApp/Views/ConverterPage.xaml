@@ -1,0 +1,103 @@
+﻿<Page
+    x:Class="NJUPTDemoApp.Views.ConverterPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ui="using:Microsoft.Toolkit.Uwp.UI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Microsoft.UI.Xaml.Controls"
+    Style="{StaticResource PageStyle}"
+    mc:Ignorable="d">
+    <Grid x:Name="ContentArea" Margin="{StaticResource MediumLeftRightMargin}">
+        <Grid>
+            <!--
+                The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
+                Place your content here.
+            -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+            <TextBlock
+                x:Uid="Converter_Dec" Name="TextBlockDec" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="4,0,0,0" />
+            <TextBox
+                Name="TextBoxDec"
+                ui:TextBoxExtensions.Regex="^[0-9]*$"
+                ui:TextBoxExtensions.ValidationMode="Dynamic"
+                Height="0" Margin="0,8,0,8"
+                Grid.Row="1" />
+
+            <TextBlock
+                x:Uid="Converter_Hex" Name="TextBlockHex" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="4,0,0,0"
+                Grid.Row="2" />
+            <TextBox
+                Name="TextBoxHex"
+                ui:TextBoxExtensions.Regex="^[A-Fa-f0-9]+$"
+                ui:TextBoxExtensions.ValidationMode="Dynamic"
+                Height="0" Margin="0,8,0,8"
+                Grid.Row="3" />
+
+            <TextBlock
+                x:Uid="Converter_Bin" Name="TextBlockBin" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="4,0,0,0"
+                Grid.Row="4" />
+            <TextBox
+                Name="TextBoxBin"
+                ui:TextBoxExtensions.Regex="^[0-1]*$"
+                ui:TextBoxExtensions.ValidationMode="Dynamic"
+                Height="0" Margin="0,8,0,8"
+                Grid.Row="5" />
+
+            <TextBlock
+                x:Uid="Converter_Oct" Name="TextBlockOct" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="4,0,0,0"
+                Grid.Row="6" />
+            <TextBox
+                Name="TextBoxOct"
+                ui:TextBoxExtensions.Regex="^[0-7]*$"
+                ui:TextBoxExtensions.ValidationMode="Dynamic"
+                Height="0" Margin="0,8,0,8"
+                Grid.Row="7" />
+            <!--<StackPanel Grid.Row="2" Grid.RowSpan="4" Grid.Column="1" Margin="8"
+                        Spacing="-5"
+                        HorizontalAlignment="Center">
+                <RadioButton x:Uid="Converter_ButtonDec"
+                             IsChecked="True"
+                             GroupName="BaseSelector"
+                             Checked="RadioButton_OnChecked" />
+                <RadioButton x:Uid="Converter_ButtonHex"
+                             GroupName="BaseSelector"
+                             Checked="RadioButton_OnChecked" />
+                <RadioButton x:Uid="Converter_ButtonBin"
+                             GroupName="BaseSelector"
+                             Checked="RadioButton_OnChecked" />
+                <RadioButton x:Uid="Converter_ButtonOct"
+                             GroupName="BaseSelector"
+                             Checked="RadioButton_OnChecked" />
+            </StackPanel>-->
+            <controls:RadioButtons x:Name="Choose" HorizontalAlignment="Center" Grid.Row="2" Grid.RowSpan="4" Grid.Column="1"
+                                   SelectedIndex="0">
+                <RadioButton Content="DEC" Tag="dec" AutomationProperties.Name="dec" Checked="Base_Checked" />
+                <RadioButton Content="HEX" Tag="hex" AutomationProperties.Name="hex" Checked="Base_Checked" />
+                <RadioButton Content="BIN" Tag="bin" AutomationProperties.Name="bin" Checked="Base_Checked" />
+                <RadioButton Content="OCT" Tag="oct" AutomationProperties.Name="oct" Checked="Base_Checked" />
+            </controls:RadioButtons>
+            <CommandBar DefaultLabelPosition="Right" Grid.Row="9" Grid.ColumnSpan="3">
+                <AppBarButton x:Uid="Converter_Button" Icon="Play" Click="Convert_Click"/>
+            </CommandBar>
+        </Grid>
+    </Grid>
+</Page>
