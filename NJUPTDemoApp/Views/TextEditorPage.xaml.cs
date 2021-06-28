@@ -102,12 +102,12 @@ namespace NJUPTDemoApp.Views
             }
 
             // Fill FontStyle MenuFlyoutItem List
-            Windows.UI.Text.ParagraphStyle[] styles;
-            styles = new Windows.UI.Text.ParagraphStyle[4];
-            styles[0] = Windows.UI.Text.ParagraphStyle.Heading1;
-            styles[1] = Windows.UI.Text.ParagraphStyle.None;
-            styles[2] = Windows.UI.Text.ParagraphStyle.Normal;
-            styles[3] = Windows.UI.Text.ParagraphStyle.Undefined;
+            ParagraphStyle[] styles;
+            styles = new ParagraphStyle[4];
+            styles[0] = ParagraphStyle.Heading1;
+            styles[1] = ParagraphStyle.None;
+            styles[2] = ParagraphStyle.Normal;
+            styles[3] = ParagraphStyle.Undefined;
             for (int i = 0; i < styles.Count(); i++)
             {
                 MenuFlyoutItem mnFontStyles = new MenuFlyoutItem();
@@ -124,15 +124,15 @@ namespace NJUPTDemoApp.Views
         {
             // Set the editors font according to the MenuFlyoutItem selected
             MenuFlyoutItem item = (MenuFlyoutItem)sender;
-            Windows.UI.Text.ParagraphStyle style = new Windows.UI.Text.ParagraphStyle();
+            ParagraphStyle style = new ParagraphStyle();
             if (item.Text == "Heading1")
-                style = Windows.UI.Text.ParagraphStyle.Heading1;
+                style = ParagraphStyle.Heading1;
             else if (item.Text == "None")
-                style = Windows.UI.Text.ParagraphStyle.None;
+                style = ParagraphStyle.None;
             else if (item.Text == "Normal")
-                style = Windows.UI.Text.ParagraphStyle.Normal;
+                style = ParagraphStyle.Normal;
             else if (item.Text == "Undefined")
-                style = Windows.UI.Text.ParagraphStyle.Undefined;
+                style = ParagraphStyle.Undefined;
             editor.Document.Selection.ParagraphFormat.Style = style;
         }
 
@@ -377,7 +377,6 @@ namespace NJUPTDemoApp.Views
                 Windows.Storage.Pickers.PickerLocationId.DocumentsLibrary;
             open.FileTypeFilter.Add(".rtf");
             open.FileTypeFilter.Add(".txt");
-            open.FileTypeFilter.Add(".docx");
             Windows.Storage.StorageFile file = await open.PickSingleFileAsync();
 
             if (file != null)
