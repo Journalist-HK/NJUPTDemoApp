@@ -11,7 +11,7 @@ namespace NJUPTDemoApp.ViewModels
 {
     public class CallLogDataGridViewModel : ObservableObject
     {
-        public ObservableCollection<SampleOrder> Source { get; } = new ObservableCollection<SampleOrder>();
+        public ObservableCollection<CallLog> Source { get; } = new ObservableCollection<CallLog>();
 
         public CallLogDataGridViewModel()
         {
@@ -22,7 +22,7 @@ namespace NJUPTDemoApp.ViewModels
             Source.Clear();
 
             // Replace this with your actual data
-            var data = await SampleDataService.GetGridDataAsync();
+            var data = await CallLogDataService.GetGridDataAsync();
 
             foreach (var item in data)
             {

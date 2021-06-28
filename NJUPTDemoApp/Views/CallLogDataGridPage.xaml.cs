@@ -25,5 +25,15 @@ namespace NJUPTDemoApp.Views
 
             await ViewModel.LoadDataAsync();
         }
+
+        private void btnOpen_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnSave_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+
+        }
     }
 }
